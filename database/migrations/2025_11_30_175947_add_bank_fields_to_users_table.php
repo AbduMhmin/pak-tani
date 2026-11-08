@@ -7,13 +7,13 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     public function up(): void
-    {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('bank_name')->nullable()->after('role');
-            $table->string('bank_account_number')->nullable()->after('bank_name');
-            $table->string('bank_account_holder')->nullable()->after('bank_account_number');
-        });
-    }
+{
+    Schema::table('users', function (Blueprint $table) {
+        $table->string('bank_name')->nullable();
+        $table->string('bank_account_number')->nullable();
+        $table->string('bank_account_holder')->nullable();
+    });
+}
 
     public function down(): void
     {
